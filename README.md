@@ -66,17 +66,25 @@ python main.py --url https://github.com/username/repo
 
 🔹 Raw Code Input
 python main.py --text "def foo(): return 42"
+```
 
-🧠 How It Works
-Component	Role
-ai_detector.py	Loads ai_detector.pkl model and returns AI-generated %
-plagiarism_checker.py	Uses SimHash & AST comparison to return plagiarism %
-analyzer.py	Orchestrates preprocessing, AI check, plagiarism scan
-repo_cloner.py	Clones GitHub repo and extracts valid source files
-preprocessor.py	Normalizes code: removes comments, renames variables
-ast_parser.py	Compares code logic using Abstract Syntax Trees
+## 🧠 How It Works
+   Component	                              Role
+   
+ai_detector.py         	Loads ai_detector.pkl model and returns AI-generated %
 
-🔍 Output Example
+plagiarism_checker.py	  Uses SimHash & AST comparison to return plagiarism %
+
+analyzer.py	            Orchestrates preprocessing, AI check, plagiarism scan
+
+repo_cloner.py	         Clones GitHub repo and extracts valid source files
+
+preprocessor.py	        Normalizes code: removes comments, renames variables
+
+ast_parser.py	          Compares code logic using Abstract Syntax Trees
+
+
+### 🔍 Output Example
 $ python main.py --url https://github.com/username/repo
 
 [+] Cloning https://github.com/username/repo.git...
@@ -97,7 +105,7 @@ $ python main.py --url https://github.com/username/repo
    AI-generated files: 2/5 (40%)
    Plagiarized files: 3/5 (60%)
 
-🧬 Model Training
+### 🧬 Model Training
 🔁 Dataset
 Place training data in:
 /data/ai_samples/
@@ -111,16 +119,17 @@ Outputs:
 
 Uses: TF-IDF + Logistic Regression (fast and interpretable)
 
-✨ Features Planned for Later
+## ✨ Features Planned for Later
 ✅ Web GUI (React or Electron)
 ✅ Real-time internet plagiarism checks
 ✅ Multi-language AST (via Tree-sitter)
 
-🔒 Privacy & Ownership
+## 🔒 Privacy & Ownership
 🛡 100% local — nothing is sent to any external API
 
 🧪 Ideal for researchers, students, reviewers, developers
 
-
+---
 🧠 "In an AI-powered world, know the origin of your code."
 — CodeAuth
+---
